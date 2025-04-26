@@ -22,7 +22,7 @@ const Index = () => {
           </div>
           
           <footer className="mt-12 text-center text-sm text-muted-foreground">
-            <p>© {new Date().getFullYear()} Максим Шаров. Портфолио ученика 7 класса.</p>
+            <p>© {new Date().getFullYear()} Нарочный Иван. Портфолио ученика 7 класса.</p>
           </footer>
         </div>
       </div>

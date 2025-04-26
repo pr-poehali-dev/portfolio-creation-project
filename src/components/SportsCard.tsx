@@ -1,71 +1,47 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-type Sport = {
-  name: string;
-  icon: string;
-  description: string;
-  experience: string;
-  badges: string[];
-};
-
 const SportsCard = () => {
-  const sports: Sport[] = [
-    {
-      name: "Плавание",
-      icon: "🏊‍♂️",
-      description: "Регулярные тренировки в бассейне, участие в соревнованиях",
-      experience: "4 года",
-      badges: ["Кроль", "Брасс", "Баттерфляй"]
-    },
-    {
-      name: "MMA",
-      icon: "🥊",
-      description: "Смешанные боевые искусства, тренировки 3 раза в неделю",
-      experience: "2 года",
-      badges: ["Ударная техника", "Защита", "Спарринги"]
-    },
-    {
-      name: "Грэпплинг",
-      icon: "🤼‍♂️",
-      description: "Борьба в партере, изучение захватов и болевых приёмов",
-      experience: "1.5 года",
-      badges: ["Бразильское джиу-джитсу", "Техника контроля", "Болевые приёмы"]
-    }
-  ];
-
   return (
-    <Card className="shadow-md hover:shadow-lg transition-shadow">
+    <Card className="shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+      <div className="absolute right-0 top-0 w-32 h-32 bg-purple-400/10 rounded-full -translate-y-1/2 translate-x-1/2" />
       <CardHeader>
-        <CardTitle className="text-2xl flex items-center gap-2">
-          <span className="text-purple-600">Спортивные увлечения</span>
-        </CardTitle>
-        <CardDescription>Мои тренировки и навыки</CardDescription>
+        <CardTitle className="text-2xl text-blue-600">Спортивные достижения</CardTitle>
       </CardHeader>
-      <CardContent>
-        <div className="grid gap-4">
-          {sports.map((sport, index) => (
-            <div key={index} className="flex items-start gap-3 p-3 bg-muted/50 rounded-lg">
-              <div className="text-4xl">{sport.icon}</div>
-              <div>
-                <h3 className="font-semibold text-lg">{sport.name}</h3>
-                <p className="text-sm text-muted-foreground mb-2">{sport.description}</p>
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs bg-purple-100 text-purple-800 py-1 px-2 rounded-full">
-                    Опыт: {sport.experience}
-                  </span>
-                </div>
-                <div className="flex flex-wrap gap-1">
-                  {sport.badges.map((badge, badgeIndex) => (
-                    <Badge key={badgeIndex} variant="outline" className="bg-blue-50">
-                      {badge}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
+      <CardContent className="space-y-4">
+        <div className="grid grid-cols-3 gap-3">
+          <div className="bg-gradient-to-b from-blue-50 to-blue-100 rounded-lg p-3 text-center">
+            <div className="text-3xl mb-1">🏊‍♂️</div>
+            <h3 className="font-medium text-sm">Плавание</h3>
+          </div>
+          <div className="bg-gradient-to-b from-red-50 to-red-100 rounded-lg p-3 text-center">
+            <div className="text-3xl mb-1">🥊</div>
+            <h3 className="font-medium text-sm">ММА</h3>
+            <Badge variant="outline" className="mt-1 text-xs">4 года</Badge>
+          </div>
+          <div className="bg-gradient-to-b from-purple-50 to-purple-100 rounded-lg p-3 text-center">
+            <div className="text-3xl mb-1">🤼</div>
+            <h3 className="font-medium text-sm">Грэпплинг</h3>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-blue-100 to-purple-100 p-4 rounded-lg">
+          <h3 className="font-semibold mb-2">Мои успехи</h3>
+          <ul className="space-y-1 text-sm">
+            <li className="flex items-start">
+              <span className="mr-2">🏅</span>
+              <span>Участие в городских соревнованиях по плаванию</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2">🏆</span>
+              <span>Опыт тренировок ММА - 4 года</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2">🥇</span>
+              <span>Развитие навыков грэпплинга</span>
+            </li>
+          </ul>
         </div>
       </CardContent>
     </Card>

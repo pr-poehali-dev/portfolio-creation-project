@@ -30,7 +30,7 @@ const BusinessCard = () => {
               <span>Написать сообщение</span>
             </Button>
             <Button variant="outline" className="flex-1">
-              +7 161 595 188
+              +7 916 159 5188
             </Button>
           </div>
         </div>
