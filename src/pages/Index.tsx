@@ -1,11 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Header from "@/components/Header";
+import SportsCard from "@/components/SportsCard";
+import BusinessCard from "@/components/BusinessCard";
+import { Separator } from "@/components/ui/separator";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
+    <div className="min-h-screen bg-slate-50">
+      <div className="max-w-5xl mx-auto px-4 py-8">
+        <Header />
+        
+        <div className="mt-6">
+          <h2 className="text-xl font-semibold text-center text-slate-700 mb-2">
+            Портфолио ученика
+          </h2>
+          <Separator className="mb-8" />
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <SportsCard />
+            <BusinessCard />
+          </div>
+          
+          <footer className="mt-12 text-center text-sm text-muted-foreground">
+            <p>© {new Date().getFullYear()} Максим Шаров. Портфолио ученика 7 класса.</p>
+          </footer>
+        </div>
       </div>
     </div>
   );
