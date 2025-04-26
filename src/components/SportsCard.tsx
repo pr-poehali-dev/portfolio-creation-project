@@ -14,6 +14,7 @@ const SportsCard = () => {
           <div className="bg-gradient-to-b from-blue-50 to-blue-100 rounded-lg p-3 text-center">
             <div className="text-3xl mb-1">🏊‍♂️</div>
             <h3 className="font-medium text-sm">Плавание</h3>
+            <Badge variant="outline" className="mt-1 text-xs">3 года</Badge>
           </div>
           <div className="bg-gradient-to-b from-red-50 to-red-100 rounded-lg p-3 text-center">
             <div className="text-3xl mb-1">🥊</div>
@@ -23,6 +24,7 @@ const SportsCard = () => {
           <div className="bg-gradient-to-b from-purple-50 to-purple-100 rounded-lg p-3 text-center">
             <div className="text-3xl mb-1">🤼</div>
             <h3 className="font-medium text-sm">Грэпплинг</h3>
+            <Badge variant="outline" className="mt-1 text-xs">1 год</Badge>
           </div>
         </div>
 
@@ -31,15 +33,15 @@ const SportsCard = () => {
           <ul className="space-y-1 text-sm">
             <li className="flex items-start">
               <span className="mr-2">🏅</span>
-              <span>Участие в городских соревнованиях по плаванию</span>
+              <span>Занимаюсь плаванием 3 года, участвую в городских соревнованиях</span>
             </li>
             <li className="flex items-start">
               <span className="mr-2">🏆</span>
-              <span>Опыт тренировок ММА - 4 года</span>
+              <span>Тренируюсь в ММА 4 года, развиваю бойцовские навыки</span>
             </li>
             <li className="flex items-start">
               <span className="mr-2">🥇</span>
-              <span>Развитие навыков грэпплинга</span>
+              <span>Изучаю грэпплинг 1 год, совершенствую технику</span>
             </li>
           </ul>
         </div>
