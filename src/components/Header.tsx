@@ -1,13 +1,13 @@
 
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { MapPin } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 
 const Header = () => {
   return (
     <div className="flex flex-col md:flex-row items-center gap-6 p-4 bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl">
       <Avatar className="h-28 w-28 border-4 border-white shadow-md">
-        <AvatarImage src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=200&h=200" />
+        <AvatarImage src="https://cdn.poehali.dev/files/7e60934f-81d5-4990-86a1-3432e86bb205.jpg" alt="Иван Нарочный" />
         <AvatarFallback className="text-2xl">ИН</AvatarFallback>
       </Avatar>
       
@@ -25,7 +25,10 @@ const Header = () => {
       </div>
       
       <div className="flex flex-col gap-2 w-full md:w-auto">
-        <Button variant="default" className="w-full md:w-auto">Связаться</Button>
+        <Button variant="default" className="w-full md:w-auto flex items-center gap-2">
+          <Phone size={16} /> 
+          <span>+7 916 159 5188</span>
+        </Button>
         <Button variant="outline" className="w-full md:w-auto">Портфолио</Button>
       </div>
     </div>
